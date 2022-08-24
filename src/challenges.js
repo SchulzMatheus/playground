@@ -10,8 +10,10 @@ function compareTrue(x, y) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(b, h) {
+  let a;
+  a = (b*h)/2;
+  return a;
 }
 
 // Desafio 3
