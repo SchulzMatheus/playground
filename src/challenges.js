@@ -36,13 +36,37 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  
+function highestCount(arrayOfNumbers) {
+let qtd = 0;
+let maiorNumero = arrayOfNumbers[0]
+for (let i = 0; i<arrayOfNumbers.length; i+=1)
+{
+  if(arrayOfNumbers[i]>maiorNumero) //compara se o maior numero é menor que o valor i do array
+  {
+    maiorNumero = arrayOfNumbers[i] //caso seja, o maior numero é substituido pelo valor i do array
+    qtd = 0; //reseta a contagem
+  }
+  if(arrayOfNumbers[i]===maiorNumero) // se o maior numero for igual o do array entao:
+  {
+    qtd += 1; //incrementa +1 a contagem
+  }
+}
+return qtd; //retorna a quantidade de vezes que o maior valor se repetiu
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
+  if (cat2<cat1 && cat2!=0) //se a posição do gato 1 é maior que a posição do gato 2 temos que:
+  {
+    return 'cat2' //retorna gato 2, pois a posição dele é mais proxima do rato
+  }
+  if(cat1<cat2 && cat1!=0) //se a posição do gato 2 é maior que a posição do gato 1 temos que:
+  {
+    return 'cat1' //retorna gato 2, pois a posição dele é mais proxima do rato
+  }
+  
+    return 'os gatos trombam e o rato foge'
 }
 
 // Desafio 8
