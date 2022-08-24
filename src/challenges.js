@@ -17,23 +17,27 @@ function calcArea(b, h) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = string.split(" "); //.split
+  return array;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) { 
+  return array[array.length-1].concat(", ", array[0]);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let a = 3*wins;
+  let b = 1*ties;
+  let c = a+b;
+  return c;
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  
 }
 
 // Desafio 7
