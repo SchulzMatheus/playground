@@ -56,14 +56,15 @@ return qtd; //retorna a quantidade de vezes que o maior valor se repetiu
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  
-  if (cat2<cat1 && cat2!=0) //se a posição do gato 1 é maior que a posição do gato 2 temos que:
+  let cat1mousedis = Math.abs(cat1 - mouse)
+  let cat2mousedis = Math.abs(cat2 - mouse)
+  if (cat2mousedis<cat1mousedis)
   {
-    return 'cat2' //retorna gato 2, pois a posição dele é mais proxima do rato
+    return 'cat2' 
   }
-  if(cat1<cat2 && cat1!=0) //se a posição do gato 2 é maior que a posição do gato 1 temos que:
+  if(cat1mousedis<cat2mousedis) 
   {
-    return 'cat1' //retorna gato 2, pois a posição dele é mais proxima do rato
+    return 'cat1' 
   }
   
     return 'os gatos trombam e o rato foge'
@@ -78,11 +79,11 @@ function fizzBuzz(arrayofNumbers) {
     {
       fb.push('fizzBuzz')
     }
-     else if(arrayofNumbers[i] % 3 === 0)
+     else if(arrayofNumbers[i] % 3 === 0 && arrayofNumbers[i]%5!=0)
     {
       fb.push('fizz')
     }
-     else if(arrayofNumbers[i]%5===0)
+     else if(arrayofNumbers[i]%5===0 && arrayofNumbers[i]%3!=0)
     {
       fb.push('buzz')
     }
