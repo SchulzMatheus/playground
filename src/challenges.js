@@ -138,8 +138,21 @@ function decode(string2) {
 }
 
 // Desafio 10
-function techList(ary, aString) {
-
+function techList(array, string) {
+  let obj1 = []; //criando o objeto
+  let x = array.sort(); // organizando o array em ordem alfabetica
+  if (array.length===0) //se o array estiver vazio o programa deve retornar vazio
+  {
+    return 'Vazio!';
+  }
+  for (let i = 0; i<x.length; i++) //percorrendo o array
+  {
+    obj1.push({
+      tech: x[i],           //usando a função push para empurrar valores no objeto
+      name: string
+    }) 
+  }
+  return obj1;
 }
 
 module.exports = {
