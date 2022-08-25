@@ -18,7 +18,7 @@ function calcArea(b, h) {
 
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split(" "); //.split
+  let array = string.split(" "); 
   return array;
 }
 
@@ -56,8 +56,8 @@ return qtd; //retorna a quantidade de vezes que o maior valor se repetiu
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1mousedis = Math.abs(cat1 - mouse)
-  let cat2mousedis = Math.abs(cat2 - mouse)
+  let cat1mousedis = Math.abs(cat1 - mouse)  //math.abs pra tirar o modulo, e calculando a distancia entre cat1 e mouse
+  let cat2mousedis = Math.abs(cat2 - mouse) // same but with cat2
   if (cat2mousedis<cat1mousedis)
   {
     return 'cat2' 
@@ -75,19 +75,19 @@ function fizzBuzz(arrayofNumbers) {
   let fb = [];
   for(let i = 0; i<arrayofNumbers.length; i+=1)
   {
-    if(arrayofNumbers[i]%3===0 && arrayofNumbers[i]%5===0)
+    if(arrayofNumbers[i]%3===0 && arrayofNumbers[i]%5===0) //vendo se é divisivel por 3 ou 5 aplicando modulo
     {
       fb.push('fizzBuzz')
     }
-     else if(arrayofNumbers[i] % 3 === 0 && arrayofNumbers[i]%5!=0)
+     else if(arrayofNumbers[i] % 3 === 0 && arrayofNumbers[i]%5!=0) //vendo se é divisivel por 3 e não por 5
     {
       fb.push('fizz')
     }
-     else if(arrayofNumbers[i]%5===0 && arrayofNumbers[i]%3!=0)
+     else if(arrayofNumbers[i]%5===0 && arrayofNumbers[i]%3!=0) //vendo se é divisivel por 5 e não por 3;
     {
       fb.push('buzz')
     }
-    else
+    else //se não cair em nenhuma condição então não é nem divisivel por 3 e nem por 5
     {
       fb.push('bug!')
     }
@@ -96,16 +96,50 @@ function fizzBuzz(arrayofNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let x = string.split('');
+  let qtd = '';
+  for(let i = 0; i<x.length; i+=1)
+  {
+    //criando if para saber se o valor i do array é igual a,e,i,o ou u caso verdadeiro substituindo o valor desse elemento por 1,2,3,4 ou 5 respectivamente
+    if(x[i]==='a')
+    x[i]=1
+    if(x[i]==='e')
+    x[i]=2;
+    if(x[i]==='i')
+    x[i]=3;
+    if(x[i]==='o')
+    x[i]=4;
+    if(x[i]==='u')
+    x[i]=5;
+  }
+    qtd = x.join('')
+  return qtd;
 }
-function decode() {
-  // seu código aqui
+function decode(string2) {
+  let y = string2.split('');
+  let qtd2 = '';
+  for(let i2 = 0; i2<y.length; i2+=1)
+  {
+    //mesma coisa da função anterior só que ao contrario.
+    if(y[i2]==='1')
+    y[i2]='a'
+    if(y[i2]==='2')
+    y[i2]='e'
+    if(y[i2]==='3')
+    y[i2]='i'
+    if(y[i2]==='4')
+    y[i2]='o'
+    if(y[i2]==='5')
+    y[i2]='u'
+  }
+    qtd2 = y.join('')
+  return qtd2;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(ary, aString) {
+
 }
 
 module.exports = {
